@@ -162,12 +162,12 @@ def init_pusher
   socket.subscribe('floydcast')
   socket['floydcast'].bind('queue-song') do |data|
     data = JSON.parse(data)
-    if data["skip"] == nil
-      requested_track = $api.search(data["query"])
-      $api.play(requested_track)
-    else
-      $api.stop
+    requested_track = $api.search(data["query"])
+    $api.play(requested_track)
     end
+  end
+  socket['floydcast'].bind('skip-song') do |data|
+    $api.skip
   end
 end
 

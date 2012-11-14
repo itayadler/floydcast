@@ -23,7 +23,7 @@ module FloydCast
 
     def play(track)
       @semaphore.synchronize do
-        puts 'pushing to queue'
+        puts "pushing to queue #{track.name}"
         @queue.push(track)
       end
     end
@@ -49,17 +49,15 @@ module FloydCast
 
     def init_player_thread
       Thread.new do
-        puts 'before begin loop'
         while true do
           track = nil
           @semaphore.synchronize do
             unless @queue.empty?
-              puts 'popping from queue'
               track = @queue.pop
             end
           end
           if track
-            puts 'playing track'
+            puts "playing track #{track.name}"
             player.play!(track)
           end
 
