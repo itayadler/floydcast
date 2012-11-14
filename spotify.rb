@@ -28,7 +28,7 @@ module FloydCast
       end
     end
 
-    def pause
+    def skip
       player.pause
     end
 
