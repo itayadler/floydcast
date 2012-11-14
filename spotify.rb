@@ -29,11 +29,11 @@ module FloydCast
     end
 
     def skip
-      player.pause
+      player.send(:trigger, :end_of_track)
     end
 
-    def stop
-      player.stop
+    def pause
+      player.pause
     end
 
     def login!
