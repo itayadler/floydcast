@@ -1,0 +1,7 @@
+source 'http://rubygems.org'
+gem 'hallon'
+gem 'ruby-debug19'
+gem 'json_pure'
+gem 'hallon-openal'
+gem 'daemonize'
+gem 'pusher-client'

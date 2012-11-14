@@ -1,0 +1,9 @@
+tmp/
+.idea/
+.spotify/
+pusher.yml
+spotify.yml
+spotify_appkey.key
+spotify_tracefile.txt
+daemon.log
+daemon.pid
