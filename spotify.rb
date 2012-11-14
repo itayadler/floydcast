@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'thread'
 require 'hallon'
 require 'hallon-openal'
