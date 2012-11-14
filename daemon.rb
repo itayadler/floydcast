@@ -164,7 +164,6 @@ def init_pusher
     data = JSON.parse(data)
     requested_track = $api.search(data["query"])
     $api.play(requested_track)
-    end
   end
   socket['floydcast'].bind('skip-song') do |data|
     $api.skip
